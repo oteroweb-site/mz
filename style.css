@@ -245,7 +245,22 @@ a {
     .hero {
         background-image: url('mountains-mobile.webp');
         background-attachment: scroll;
-        /* Melhora performance no mobile */
+    }
+}
+
+.hero-logo {
+    width: 400px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 180px;
+        height: 68px;
     }
 }
 
