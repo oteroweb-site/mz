@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build outputs (se houver)
+dist/
+build/
+
+# IMPORTANTE: NÃO ignorar assets necessários para deploy
+# As pastas abaixo DEVEM ser incluídas no git push:
+# - fonts/
+# - css/
+# - imagens/ (se existir)
+# - *.webp, *.jpg, *.svg, *.png
