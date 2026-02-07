@@ -9,25 +9,94 @@
     <title>Matheus Zanete | Psicólogo Clínico</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- CSS Crítico -->
+    <style>
+        :root {
+            --primary-color: #2d3a31;
+            --accent-color: #8ea891;
+            --accent-dark: #748c71;
+            --text-color: #4a574d;
+            --text-light: #f8fafc;
+            --bg-light: #fdf7ed;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+        }
+
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-logo {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                padding-top: 140px;
+            }
+
+            .hero-logo {
+                width: 180px;
+            }
+        }
+    </style>
+
+    <!-- Carregamento Assíncrono de CSS e Ícones -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
     <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
-            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
 
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Preload de Fontes Críticas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Schema.org Markup for SEO -->
     <script type="application/ld+json">
     {
@@ -151,8 +220,9 @@
         <div class="hero-overlay"></div>
         <div id="particles-js"></div>
         <div class="container hero-content">
-            <img src="mz_logo_branco_hero.png" alt="Matheus Zanete" class="hero-logo fade-in" width="400" height="150"
-                fetchpriority="high">
+            <img src="mz_logo_branco_hero.png" srcset="logo-mobile.webp 200w, mz_logo_branco_hero.png 400w"
+                sizes="(max-width: 600px) 180px, 400px" alt="Matheus Zanete" class="hero-logo fade-in" width="400"
+                height="150" fetchpriority="high">
             <p class="fade-in delay-1">Psicologia Clínica com abordagem humana e ética. Atendimento Online especializado
                 em ansiedade, carreira e desenvolvimento pessoal.</p>
             <div class="hero-btns fade-in delay-2">
@@ -182,8 +252,10 @@
                 <!-- Foto à direita -->
                 <div class="sobre-img-container">
                     <div class="photo-frame">
-                        <img src="Gemini_Generated_Image_75m58575m58575m5.webp" alt="Matheus Zanete Psicólogo"
-                            width="400" height="548" loading="lazy">
+                        <img src="Gemini_Generated_Image_75m58575m58575m5.webp"
+                            srcset="photo-mobile.webp 400w, Gemini_Generated_Image_75m58575m58575m5.webp 864w"
+                            sizes="(max-width: 600px) 140px, 400px" alt="Matheus Zanete Psicólogo" width="400"
+                            height="548" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -395,8 +467,13 @@
         </div>
     </footer>
 
-    <script src="particles.min.js"></script>
-    <script src="particles-init.js"></script>
+    <!-- Google Fonts carregadas após renderização inicial -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="particles.min.js" defer></script>
+    <script src="particles-init.js" defer></script>
 
     <script>
         // Simple Mobile Menu Toggle

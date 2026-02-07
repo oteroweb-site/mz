@@ -234,12 +234,19 @@ a {
     align-items: center;
     justify-content: center;
     background-image: url('mountains-trees-mesa-grande-morning-light-san-diego.webp');
-    /* Local Background Image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('mountains-mobile.webp');
+        background-attachment: scroll;
+        /* Melhora performance no mobile */
+    }
 }
 
 .hero-overlay {
