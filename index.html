@@ -7,22 +7,27 @@
     <meta name="description"
         content="Psicólogo Clínico Matheus Zanete. Atendimento online humanizado para ansiedade, depressão e desenvolvimento pessoal. Agende sua sessão.">
     <title>Matheus Zanete | Psicólogo Clínico</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
+            rel="stylesheet">
+    </noscript>
 
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome (para ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Schema.org Markup for SEO -->
     <script type="application/ld+json">
     {
@@ -123,7 +128,7 @@
         <div class="container">
             <div class="logo">
                 <!-- Usando o logo do diretório atual -->
-                <img src="mz logo preto c nome horizon.svg" alt="Logo MZ" class="logo-img">
+                <img src="mz logo preto c nome horizon.svg" alt="Logo MZ" class="logo-img" width="220" height="50">
 
             </div>
             <ul class="nav-links">
@@ -146,7 +151,8 @@
         <div class="hero-overlay"></div>
         <div id="particles-js"></div>
         <div class="container hero-content">
-            <img src="mz_logo_branco_hero.png" alt="Matheus Zanete" class="hero-logo fade-in">
+            <img src="mz_logo_branco_hero.png" alt="Matheus Zanete" class="hero-logo fade-in" width="400" height="150"
+                fetchpriority="high">
             <p class="fade-in delay-1">Psicologia Clínica com abordagem humana e ética. Atendimento Online especializado
                 em ansiedade, carreira e desenvolvimento pessoal.</p>
             <div class="hero-btns fade-in delay-2">
@@ -176,7 +182,8 @@
                 <!-- Foto à direita -->
                 <div class="sobre-img-container">
                     <div class="photo-frame">
-                        <img src="Gemini_Generated_Image_75m58575m58575m5.webp" alt="Matheus Zanete Psicólogo">
+                        <img src="Gemini_Generated_Image_75m58575m58575m5.webp" alt="Matheus Zanete Psicólogo"
+                            width="400" height="548" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -364,7 +371,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="mz logo preto c nome horizon.svg" alt="MZ Logo" style="height: 50px; filter: invert(1);">
+                    <img src="mz logo preto c nome horizon.svg" alt="MZ Logo" style="height: 50px; filter: invert(1);"
+                        width="220" height="50" loading="lazy">
                     <p>Psicologia Clínica & Desenvolvimento Humano</p>
                 </div>
                 <div class="footer-links">
