@@ -10,16 +10,84 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Ativos Críticos: Prioridade Máxima -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap">
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome customizado - apenas 7 ícones usados (economia de 67KB) -->
+    <style>
+        @font-face {
+            font-family: "Font Awesome 6 Brands";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format("woff2")
+        }
+
+        @font-face {
+            font-family: "Font Awesome 6 Free";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2")
+        }
+
+        .fab,
+        .fa-brands {
+            font-family: "Font Awesome 6 Brands";
+            font-weight: 400
+        }
+
+        .fas,
+        .fa-solid {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900
+        }
+
+        .fab,
+        .fas {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            line-height: 1;
+            text-rendering: auto
+        }
+
+        .fa-whatsapp:before {
+            content: "\f232"
+        }
+
+        .fa-arrow-down:before {
+            content: "\f063"
+        }
+
+        .fa-laptop-medical:before {
+            content: "\f812"
+        }
+
+        .fa-shield-halved:before {
+            content: "\f3ed"
+        }
+
+        .fa-calendar-check:before {
+            content: "\f274"
+        }
+
+        .fa-seedling:before {
+            content: "\f4d8"
+        }
+
+        .fa-chevron-down:before {
+            content: "\f078"
+        }
+    </style>
+
+    <!-- Preload Hero Assets (Responsive) -->
+    <link rel="preload" as="image" href="mz logo preto c nome 2 branco.svg" fetchpriority="high">
+    <link rel="preload" as="image" href="mountains-mobile.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="mountains-trees-mesa-grande-morning-light-san-diego.webp"
+        media="(min-width: 769px)">
+
     <link rel="stylesheet" href="style.css">
     <!-- Schema.org Markup for SEO -->
     <script type="application/ld+json">
@@ -144,9 +212,8 @@
         <div class="hero-overlay"></div>
         <div id="particles-js"></div>
         <div class="container hero-content">
-            <img src="mz_logo_branco_hero.png" srcset="logo-mobile.webp 200w, mz_logo_branco_hero.png 400w"
-                sizes="(max-width: 600px) 180px, 400px" alt="Matheus Zanete" class="hero-logo" width="400" height="150"
-                fetchpriority="high">
+            <img src="mz logo preto c nome 2 branco.svg" alt="Matheus Zanete - Psicólogo Clínico" class="hero-logo"
+                width="400" height="150" fetchpriority="high">
             <p>Psicologia Clínica com abordagem humana e ética. Atendimento Online especializado
                 em ansiedade, carreira e desenvolvimento pessoal.</p>
             <div class="hero-btns">

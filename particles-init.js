@@ -1,7 +1,7 @@
 var particlesConfig = {
     "particles": {
         "number": {
-            "value": 100,
+            "value": window.innerWidth < 768 ? 80 : 150,
             "density": {
                 "enable": true,
                 "value_area": 800
